@@ -2,9 +2,9 @@
   "dependencies": {
     "angular": "^1.6.1"
   },
-  "name": "iw-zoom",
+  "name": "ng-iw-zoom",
   "version": "0.1.0",
-  "description": "An angular directive for zooming objects in and out using the CSS transform: scale() property",
+  "description": "An angular directive for implementing zoom on any DOM element by using the CSS transform: scale() property",
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
