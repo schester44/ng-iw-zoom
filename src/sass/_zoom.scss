@@ -1,0 +1,59 @@
+.iw-zoom-controller {
+  z-index: 999;
+  height: 32px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  &[vertical] {
+    @include transform(rotate(-90deg));
+  }
+  
+  input[type=range] {
+    @include appearance(none);
+    padding: 0;
+    margin: 0;
+    background-clip: padding-box;
+    outline: none;
+    border-radius: 0;
+    background: $dark-gray;
+    height: 7px;
+    width: 150px;
+
+    &:active {
+      &::-webkit-slider-thumb {
+        background: $sidebar;
+      }
+    }
+    
+    &::-webkit-slider-thumb {
+      @include appearance(none);
+      cursor: pointer;
+  
+      height: 32px; 
+      width: 12px;
+      background: $dark-gray;
+      box-shadow: -2px 2px 3px rgba(0,0,0,0.2);
+      border: 0;
+      border-radius: 30px;
+    }
+  }
+
+  button {
+    width: 25px;
+    font-size: 26px;
+    line-height: auto;
+    background: $dark-gray;
+    color: $sidebar;
+    border: 1px solid transparent;
+    z-index: 2;
+    border-radius: 5px;
+
+    &:active{
+      background: $sidebar;
+    }
+  }
+}
