@@ -9,7 +9,7 @@
  			restrict: 'EA',
  			replace: true,
  			transclude: true,
- 			template: '<div class="iw-zoom-controller"><button ng-click="zoom.out()">-</button><input type="range" orient="vertical" min="0.75" max="2" step="0.25" value="{{ level }}" ng-model="level"><button ng-click="zoom.in()">+</button></div>',
+ 			template: '<div class="iw-zoom-controller"><button ng-click="zoom.out()">-</button><input type="range" orient="{{ opt.orient }}" min="{{ opt.min }}" max="{{ opt.max }} " step="{{ opt.step }}" value="{{ level }}" ng-model="level"><button ng-click="zoom.in()">+</button></div>',
  			scope: {
  				options: '='
  			},
@@ -47,6 +47,7 @@
 					});
  				});
 
+ 				$scope.opt = options;
  				$scope.level = options.defaultZoom;;
 
  				this.in = function(amount) {
