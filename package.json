@@ -3,7 +3,7 @@
     "angular": "^1.6.1"
   },
   "name": "ng-iw-zoom",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An angular directive for implementing zoom on any DOM element by using the CSS transform: scale() property",
   "main": "index.js",
   "devDependencies": {},
